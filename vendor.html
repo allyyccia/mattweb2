@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="header">
+    <img src="awlogo.png" style="height: 75px">
+     <span style="font-size:30px;cursor:pointer;float: right;padding-top: 10px" onclick="openNav()">&#9776;</span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+  <a href="about.html">Meet the Team!</a>
+  <button class="dropdown-btn">Services 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="appointment.html">Book an appointment</a>
+  </div>
+    <a href="vendor.html">Vendors</a>
+
+</div>
+    </div>
+    <div style="height: 300px">
+    <p>Vendors</p>
+        </div>
+    
+    
+    
+    
+    
+    
+    <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+    <script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+    
+    <div class="footer">
+    <div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+   <p>Copyright, &copy; 2013-<script language="javascript" type="text/javascript">
+            var today = new Date()
+            var year = today.getFullYear()
+            document.write(year)
+            </script>  Anderson Wikoff
+        </p>
+    </div>
+    </body>
+</html>
